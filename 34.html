@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prime Number Check (While Loop)</title>
+</head>
+<body>
+
+<h2>Prime Number Checker (Using While Loop)</h2>
+
+<div id="output"></div>
+
+<script>
+
+    // Function to check whether a number is Prime using while loop
+    function isPrime(num) {
+
+        if (num <= 1) {
+            return "Not a Prime Number";
+        }
+
+        let i = 2;
+
+        while (i <= Math.sqrt(num)) {
+
+            if (num % i === 0) {
+                return "Not a Prime Number";
+            }
+
+            i++;
+        }
+
+        return "Prime Number";
+    }
+
+    // Test cases
+    let n1 = 7;
+    let n2 = 18;
+    let n3 = 23;
+
+    let result =
+        "<b>Input:</b> 7<br>" +
+        "<b>Output:</b> " + isPrime(n1) + "<br><br>" +
+
+        "<b>Input:</b> 18<br>" +
+        "<b>Output:</b> " + isPrime(n2) + "<br><br>" +
+
+        "<b>Input:</b> 23<br>" +
+        "<b>Output:</b> " + isPrime(n3);
+
+    document.getElementById("output").innerHTML = result;
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Palindrome Number Checker</title>
+</head>
+<body>
+
+<h2>Palindrome Number Checker</h2>
+
+<div id="output"></div>
+
+<script>
+
+    // Function to check whether a number is a Palindrome
+    function isPalindromeNumber(num) {
+
+        let original = num;
+        let reversed = 0;
+
+        while (num > 0) {
+            let digit = num % 10;               // extract last digit
+            reversed = (reversed * 10) + digit; // build reversed number
+            num = Math.floor(num / 10);         // remove digit
+        }
+
+        return original === reversed;
+    }
+
+    // Test examples
+    let n1 = 121;
+    let n2 = 1331;
+    let n3 = 1234; // not palindrome
+
+    let display =
+        "<b>Input:</b> 121<br>" +
+        "<b>Output:</b> " + (isPalindromeNumber(n1) ? "Palindrome" : "Not Palindrome") + "<br><br>" +
+
+        "<b>Input:</b> 1331<br>" +
+        "<b>Output:</b> " + (isPalindromeNumber(n2) ? "Palindrome" : "Not Palindrome") + "<br><br>" +
+
+        "<b>Input:</b> 1234<br>" +
+        "<b>Output:</b> " + (isPalindromeNumber(n3) ? "Palindrome" : "Not Palindrome");
+
+    document.getElementById("output").innerHTML = display;
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Reverse a Number</title>
+</head>
+<body>
+
+<h2>Reverse a Number using JavaScript</h2>
+
+<div id="result"></div>
+
+<script>
+
+    // Function to reverse a number
+    function reverseNumber(num) {
+
+        let reversed = 0;
+
+        while (num > 0) {
+            let digit = num % 10;            // extract last digit
+            reversed = (reversed * 10) + digit; // build reversed number
+            num = Math.floor(num / 10);      // remove last digit
+        }
+
+        return reversed;
+    }
+
+    // Test values
+    let n1 = 12345;
+    let n2 = 9070;
+    let n3 = 6801;
+
+    let output =
+        "<b>Input:</b> 12345<br>" +
+        "<b>Output:</b> " + reverseNumber(n1) + "<br><br>" +
+
+        "<b>Input:</b> 9070<br>" +
+        "<b>Output:</b> " + reverseNumber(n2) + "<br><br>" +
+
+        "<b>Input:</b> 6801<br>" +
+        "<b>Output:</b> " + reverseNumber(n3);
+
+    document.getElementById("result").innerHTML = output;
+
+</script>
+
+</body>
+</html>

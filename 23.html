@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sum of Multiples of 3 and 5 under 1000</title>
+</head>
+<body>
+
+<h2>Sum of Multiples of 3 and 5 (Below 1000)</h2>
+
+<div id="result"></div>
+
+<script>
+
+    // Function to calculate sum of multiples of 3 or 5 below 1000
+    function sumOfMultiples(limit) {
+
+        let sum = 0;
+
+        for (let i = 1; i < limit; i++) {
+            if (i % 3 === 0 || i % 5 === 0) {
+                sum += i;
+            }
+        }
+
+        return sum;
+    }
+
+    // call function with limit = 1000
+    const total = sumOfMultiples(1000);
+
+    document.getElementById("result").innerHTML =
+        "Sum of multiples of 3 and 5 below 1000 = " + total;
+
+</script>
+
+</body>
+</html>

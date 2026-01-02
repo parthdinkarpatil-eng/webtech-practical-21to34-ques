@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Closest Value to 100</title>
+</head>
+<body>
+
+<h2>Find Closest Value to 100</h2>
+
+<div id="output"></div>
+
+<script>
+
+    // Function to find closest number to 100
+    function closestTo100(a, b) {
+
+        let diffA = Math.abs(100 - a);
+        let diffB = Math.abs(100 - b);
+
+        if (diffA < diffB) {
+            return a + " is closer to 100";
+        }
+        else if (diffB < diffA) {
+            return b + " is closer to 100";
+        }
+        else {
+            return "Both numbers are equally close to 100";
+        }
+    }
+
+    // Sample test values
+    let result1 = closestTo100(90, 110);
+    let result2 = closestTo100(95, 130);
+    let result3 = closestTo100(85, 115); // equal distance case
+
+    let display =
+        "<b>Input:</b> 90, 110<br>" +
+        "<b>Output:</b> " + result1 + "<br><br>" +
+
+        "<b>Input:</b> 95, 130<br>" +
+        "<b>Output:</b> " + result2 + "<br><br>" +
+
+        "<b>Input:</b> 85, 115<br>" +
+        "<b>Output:</b> " + result3;
+
+    document.getElementById('output').innerHTML = display;
+
+</script>
+
+</body>
+</html>

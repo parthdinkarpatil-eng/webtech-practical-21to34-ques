@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fibonacci Series Up to n Terms</title>
+</head>
+<body>
+
+<h2>Fibonacci Series (Up to n Terms)</h2>
+
+<div id="output"></div>
+
+<script>
+
+    // Function to generate Fibonacci series up to n terms
+    function fibonacciSeries(n) {
+
+        let a = 0, b = 1;
+        let series = "";
+
+        for (let i = 1; i <= n; i++) {
+
+            series += a + ", ";
+
+            let next = a + b;
+            a = b;
+            b = next;
+        }
+
+        return series.slice(0, -2); // remove last comma and space
+    }
+
+    // Example: generate first 10 terms
+    let result1 = fibonacciSeries(10);
+
+    // Another example: first 15 terms
+    let result2 = fibonacciSeries(15);
+
+    let display =
+        "<b>Fibonacci Series (10 Terms):</b><br>" +
+        result1 + "<br><br>" +
+
+        "<b>Fibonacci Series (15 Terms):</b><br>" +
+        result2;
+
+    document.getElementById("output").innerHTML = display;
+
+</script>
+
+</body>
+</html>

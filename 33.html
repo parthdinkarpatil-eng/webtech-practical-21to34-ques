@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Duck Number Checker</title>
+</head>
+<body>
+
+<h2>Duck Number Checker</h2>
+
+<div id="result"></div>
+
+<script>
+
+    // Function to check whether a number is a Duck Number
+    function isDuckNumber(num) {
+
+        let str = num.toString();
+
+        // First digit should not be zero
+        if (str[0] === '0') {
+            return "Not a Duck Number";
+        }
+
+        // Check if number contains zero anywhere else
+        for (let i = 1; i < str.length; i++) {
+            if (str[i] === '0') {
+                return "Duck Number";
+            }
+        }
+
+        return "Not a Duck Number";
+    }
+
+    // Test cases
+    let n1 = 105;   // Duck Number
+    let n2 = 3210;  // Duck Number
+    let n3 = 0567;  // Not allowed: leading zero
+    let n4 = 89;    // Not a Duck Number
+
+    let display =
+        "<b>Input:</b> 105<br>" +
+        "<b>Output:</b> " + isDuckNumber(n1) + "<br><br>" +
+
+        "<b>Input:</b> 3210<br>" +
+        "<b>Output:</b> " + isDuckNumber(n2) + "<br><br>" +
+
+        "<b>Input:</b> 0567<br>" +
+        "<b>Output:</b> " + isDuckNumber(n3) + "<br><br>" +
+
+        "<b>Input:</b> 89<br>" +
+        "<b>Output:</b> " + isDuckNumber(n4);
+
+    document.getElementById("result").innerHTML = display;
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sum of Two Integers (Triple if Equal)</title>
+</head>
+<body>
+
+<h2>Sum of Two Integers — Triple if Equal</h2>
+
+<div id="output"></div>
+
+<script>
+
+    // Function to compute sum of two integers
+    // If both are equal, return triple their sum
+    function computeSum(a, b) {
+
+        if (a === b) {
+            return 3 * (a + b);
+        } else {
+            return a + b;
+        }
+    }
+
+    // Example test cases
+    let result1 = computeSum(10, 20);
+    let result2 = computeSum(10, 10);
+
+    let display =
+        "Input: 10, 20<br>" +
+        "Output: " + result1 + "<br><br>" +
+
+        "Input: 10, 10<br>" +
+        "Output: " + result2;
+
+    document.getElementById("output").innerHTML = display;
+
+</script>
+
+</body>
+</html>

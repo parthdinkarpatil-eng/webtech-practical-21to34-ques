@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pyramid Pattern Using Function</title>
+</head>
+<body>
+
+<h2>Pyramid Pattern (Nested For Loop)</h2>
+
+<div id="pattern"></div>
+
+<script>
+
+    // Function to print pyramid pattern
+    function printPyramid(rows) {
+
+        let output = "";
+
+        for (let i = 1; i <= rows; i++) {
+
+            // inner loop to print stars
+            for (let j = 1; j <= i; j++) {
+                output += "* ";
+            }
+
+            // new line after each row
+            output += "<br>";
+        }
+
+        document.getElementById("pattern").innerHTML = output;
+    }
+
+    // call function with 5 rows
+    printPyramid(5);
+
+</script>
+
+</body>
+</html>

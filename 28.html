@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Neon Number Checker</title>
+</head>
+<body>
+
+<h2>Neon Number Checker</h2>
+
+<div id="result"></div>
+
+<script>
+
+    // Function to check whether a number is a Neon Number
+    function isNeonNumber(num) {
+
+        let square = num * num;
+        let sum = 0;
+
+        // Sum the digits of the square
+        while (square > 0) {
+            sum += square % 10;
+            square = Math.floor(square / 10);
+        }
+
+        return sum === num;
+    }
+
+    // Example test values
+    let n1 = 9;   // Neon number
+    let n2 = 12;  // Not Neon
+    let n3 = 1;   // Neon number
+
+    let output =
+        "<b>Input:</b> 9<br>" +
+        "<b>Output:</b> " + isNeonNumber(n1) + "<br><br>" +
+
+        "<b>Input:</b> 12<br>" +
+        "<b>Output:</b> " + isNeonNumber(n2) + "<br><br>" +
+
+        "<b>Input:</b> 1<br>" +
+        "<b>Output:</b> " + isNeonNumber(n3);
+
+    document.getElementById("result").innerHTML = output;
+
+</script>
+
+</body>
+</html>

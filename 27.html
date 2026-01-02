@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Check Same Last Digit</title>
+</head>
+<body>
+
+<h2>Check if Last Digit of Three Integers is Same</h2>
+
+<div id="output"></div>
+
+<script>
+
+    // Function to check whether the last digit of
+    // three positive integers is the same
+    function sameLastDigit(a, b, c) {
+
+        let lastA = a % 10;
+        let lastB = b % 10;
+        let lastC = c % 10;
+
+        return (lastA === lastB && lastB === lastC);
+    }
+
+    // Example test values
+    let case1 = sameLastDigit(20, 30, 400);   // true
+    let case2 = sameLastDigit(17, 27, 57);    // true
+    let case3 = sameLastDigit(25, 36, 90);    // false
+
+    let display =
+        "<b>Input:</b> 20, 30, 400<br>" +
+        "<b>Output:</b> " + case1 + "<br><br>" +
+
+        "<b>Input:</b> 17, 27, 57<br>" +
+        "<b>Output:</b> " + case2 + "<br><br>" +
+
+        "<b>Input:</b> 25, 36, 90<br>" +
+        "<b>Output:</b> " + case3;
+
+    document.getElementById("output").innerHTML = display;
+
+</script>
+
+</body>
+</html>

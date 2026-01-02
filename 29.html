@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Buzz Number Checker</title>
+</head>
+<body>
+
+<h2>Buzz Number Checker</h2>
+
+<div id="output"></div>
+
+<script>
+
+    // Function to check whether a number is a Buzz Number
+    function isBuzzNumber(num) {
+
+        // Condition 1: divisible by 7
+        // Condition 2: last digit is 7
+        if (num % 7 === 0 || num % 10 === 7) {
+            return "Buzz Number";
+        } else {
+            return "Not a Buzz Number";
+        }
+    }
+
+    // Test cases
+    let n1 = 63;  // divisible by 7
+    let n2 = 72;  // neither ends with 7 nor divisible by 7
+    let n3 = 107; // ends with 7
+
+    let display =
+        "<b>Input:</b> 63<br>" +
+        "<b>Output:</b> " + isBuzzNumber(n1) + "<br><br>" +
+
+        "<b>Input:</b> 72<br>" +
+        "<b>Output:</b> " + isBuzzNumber(n2) + "<br><br>" +
+
+        "<b>Input:</b> 107<br>" +
+        "<b>Output:</b> " + isBuzzNumber(n3);
+
+    document.getElementById("output").innerHTML = display;
+
+</script>
+
+</body>
+</html>
